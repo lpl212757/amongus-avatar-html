@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+}
+
+.left-panel{
+    width: 600px;
+    height: 600px;
+}
+
+.right-panel{
+    width: 400px;
+}
+
+.menu{
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu>img{
+    margin-left: 1px;
+}
+
+.items{
+    height: 520px;
+    background-color: grey;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+.items>img{
+    margin-left: 3px;
+    border: 3px solid white;
+}
+
+.items>img, .menu>img{
+    cursor: pointer;
+}
+.items>img:hover, .menu>img:hover{
+    border: 3px solid yellow!important;
+}
+
+
+.selected{
+    border: 3px solid red!important;
+}
