@@ -6,7 +6,8 @@ var crewmate = {
   character: this.data[1].items[0].url,
   hat: this.data[2].items[0].url,
   dress: this.data[3].items[0].url,
-  pet: this.data[4].items[0].url
+  pet: this.data[4].items[0].url,
+  sign: this.data[5].items[0].url
 }
 
 var lastSelectedMenu_elm;
@@ -51,7 +52,7 @@ loadItems = (key, selectedId) => {
     img_el.src = item.url;
     img_el.width = 75;
     img_el.height = 75;
-    if(item.id === 1)
+    if(item.id === selectedId)
     {
       img_el.classList.add("selected");
       lastSelectedItem_elm = img_el;

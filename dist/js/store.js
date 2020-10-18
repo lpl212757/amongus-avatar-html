@@ -245,4 +245,17 @@ var data = [
       { id: 25, url: "dist/img/pet/BEDCRAB.png" },
     ],
   },
+  {
+    id: 6,
+    key: "sign",
+    url: "dist/img/VOTE.png",
+    items: [
+      { id: 1, url: "dist/img/sign/BASE.png" },
+      { id: 2, url: "dist/img/sign/defeat.png" },
+      { id: 3, url: "dist/img/sign/victory.png" },
+      { id: 4, url: "dist/img/sign/IMPOSTOR.png" },
+      { id: 5, url: "dist/img/sign/IVOTED.png" },
+      { id: 6, url: "dist/img/sign/CREWMATE.png" }
+    ],
+  },
 ];
