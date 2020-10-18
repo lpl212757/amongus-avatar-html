@@ -1,5 +1,17 @@
-.container{
+body{
+    background-image: url('../img/OUTERSPACE.png');
+    background-repeat: repeat;
+    text-align: center;
+}
+
+#logo-among-us{
+    
+}
+
+.app-container{
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .left-panel{
