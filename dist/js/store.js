@@ -25,6 +25,13 @@ var data = [
       { id: 19, url: "dist/img/background/19.png" },
       { id: 20, url: "dist/img/background/20.png" },
       { id: 21, url: "dist/img/background/OUTERSPACE.png" },
+      { id: 22, url: "dist/img/background/galaxy-background-1.png" },
+      { id: 23, url: "dist/img/background/galaxy-background-2.png" },
+      { id: 24, url: "dist/img/background/galaxy-background-3.png" },
+      { id: 25, url: "dist/img/background/galaxy-background-4.png" },
+      { id: 26, url: "dist/img/background/galaxy-background-5.png" },
+      { id: 27, url: "dist/img/background/galaxy-background-6.png" },
+      { id: 28, url: "dist/img/background/galaxy-background-7.png" },
     ],
   },
   {
