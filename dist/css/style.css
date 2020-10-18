@@ -4,29 +4,31 @@
 
 .left-panel{
     width: 600px;
+    border: solid 3px black;
     height: 600px;
 }
 
 .right-panel{
+    margin-left: 5px;
     width: 400px;
 }
 
 .menu{
-    height: 80px;
+    height: 100px;
     text-align: center;
     vertical-align: middle;
 }
 
 .menu>img{
-    margin-left: 1px;
+    margin-left: 2px;
 }
 
 .items{
-    height: 520px;
+    height: 500px;
+    border: solid 3px black;
     background-color: grey;
     text-align: center;
     vertical-align: middle;
-    padding: 5px;
     overflow-y: scroll;
 }
 
