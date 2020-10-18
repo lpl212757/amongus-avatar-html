@@ -9,6 +9,7 @@ var crewmate = {
   pet: this.data[4].items[0].url
 }
 
+var lastSelectedMenu_elm;
 loadMenu = () => {
   let divMenu = document.getElementById("menu");
   divMenu.innerHTML = "";
@@ -18,17 +19,30 @@ loadMenu = () => {
     img_el.src = t.url;
     img_el.width = 75;
     img_el.height = 75;
+    if(t.id === 1)
+    {
+      img_el.classList.add("selected");
+      lastSelectedMenu_elm = img_el;
+    }
+
     img_el.onclick = () => {
       let selectedItemURL = this.crewmate[t.key];
-      console.log(selectedItemURL);
-      const selectedId = this.data.find(a => a.key === t.key).items.find(i => i.url === selectedItemURL).id;
-      this.loadItems(t.key, selectedId);
+
+      if(lastSelectedMenu_elm)
+      {
+        lastSelectedMenu_elm.classList.remove("selected");
+      }
+      img_el.classList.add("selected");
+      lastSelectedMenu_elm = img_el;
+
+      const selectedItemId = this.data.find(a => a.key === t.key).items.find(i => i.url === selectedItemURL).id;
+      this.loadItems(t.key, selectedItemId);
     }
     divMenu.appendChild(img_el);
   });
 }
 
-var lastSelected_elm;
+var lastSelectedItem_elm;
 loadItems = (key, selectedId) => {
   let divItems = document.getElementById("items");
   divItems.innerHTML = "";
@@ -37,17 +51,17 @@ loadItems = (key, selectedId) => {
     img_el.src = item.url;
     img_el.width = 75;
     img_el.height = 75;
-    if(item.id === selectedId)
+    if(item.id === 1)
     {
       img_el.classList.add("selected");
-      lastSelected_elm = img_el;
+      lastSelectedItem_elm = img_el;
     }
 
     img_el.onclick = (ev) => {
       this.crewmate[key] = item.url;
-      lastSelected_elm.classList.remove("selected");
+      lastSelectedItem_elm.classList.remove("selected");
       img_el.classList.add("selected");
-      lastSelected_elm = img_el;
+      lastSelectedItem_elm = img_el;
       drawCremate();
     }
     divItems.appendChild(img_el);
